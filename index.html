@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function insert(num)
+        {
+        // let a=document.getElementById(v).value;
+        // let b=document.getElementById(2).value;
+        document.form1.screen.value=document.form1.screen.value + num;  
+        }
+        function res()
+        {
+            let v=document.form1.screen.value
+            if(v)
+            {
+                document.form1.screen.value=eval(v)
+            }
+        }
+        function clr()
+        {
+            document.form1.screen.value="";
+        }
+        function back()
+        {
+            let val=document.form1.screen.value;
+            document.form1.screen.value=val.substring(0,val.length-1);
+        }
+    </script>
+    <style>
+        #a{
+            text-align: center;
+            margin: 100px;
+            
+            font-size: 40px;
+            border: 10px;
+            width: fit-content;
+            border-style: solid;
+            border-color: red;
+            margin-left: 420px;
+            margin-right: 420px;
+            
+            background-color: rgb(128, 119, 119);
+        }
+
+        #b{
+            margin-top: 30px;
+            margin-right: 100px;
+            margin-left: 100px;
+
+            padding-bottom: 30px;
+        }
+        .screen{
+            background-color:rgb(120, 205, 120);
+            width: 270px;
+        }
+        input{
+
+            height:50px;
+            width: 50px;
+            
+            background-color: green;
+            color: white;
+            
+
+        }
+        input:hover{
+            background-color: red;
+        }
+        textarea{
+            width: fit-content;
+            height: 70px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        
+        
+        <div id="a"><h3>calculator</h3>
+            <div id="b"><input name="screen" class="screen">
+            <br>
+                <input type="button" value="C" name="v" onclick="clr()">
+                <input type="button" value="B" name="v" onclick="back()">
+                <input type="button" value="/" name="" onclick="insert('/')">
+                <input type="button" value="*" name="" onclick="insert('*')">
+                <br>
+                <input type="button" value="1" name="v" onclick="insert(1)">
+                <input type="button" value="2" name="2" onclick="insert(2)">
+                <input type="button" value="3" name="3" onclick="insert(3)">
+                <input type="button" value="+" name="" onclick="insert('+')">
+                <br>
+
+                <input type="button" value="4" name="4" onclick="insert(4)">
+
+                <input type="button" value="5" name="5" onclick="insert(5)">
+
+                <input type="button" value="6" name="6" onclick="insert(6)">
+                <input type="button" value="-" name="" onclick="insert('-')">
+                <br>
+                <input type="button" value="7" name="7" onclick="insert(7)">
+
+                <input type="button" value="8" name="8" onclick="insert(8)">
+
+                <input type="button" value="9" name="9" onclick="insert(9)">
+                <b><input type="button" value="." onclick="insert('.')"></b>
+                <br>
+                <input style="width: 100px;" type="button" value="0" name="0" onclick="insert(0)">
+
+
+                <input style="width: 100px;" type="button" value="=" name="" onclick="res()">
+            </div>    
+        </div>
+
+    </form>
+</body>
+</html>
